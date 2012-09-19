@@ -1,5 +1,5 @@
 {
-    "hash": "4e7d8a33377d21c6278fe6c03958e442",
+    "hash": "394c422ba4ec920367cba0768111daff",
     "packages": [
         {
             "name": "doctrine/common",
@@ -18,6 +18,7 @@
             "require": {
                 "php": ">=5.3.2"
             },
+            "time": "1347882477",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -66,8 +67,7 @@
                 "eventmanager",
                 "annotations",
                 "persistence"
-            ],
-            "time": "1347882477"
+            ]
         },
         {
             "name": "doctrine/dbal",
@@ -87,6 +87,7 @@
                 "php": ">=5.3.2",
                 "doctrine/common": "2.3.*"
             },
+            "time": "1347882607",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -128,8 +129,7 @@
                 "persistence",
                 "dbal",
                 "queryobject"
-            ],
-            "time": "1347882607"
+            ]
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -160,6 +160,7 @@
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
+            "time": "1347289964",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -196,8 +197,7 @@
                 "orm",
                 "persistence",
                 "dbal"
-            ],
-            "time": "1347289964"
+            ]
         },
         {
             "name": "doctrine/orm",
@@ -222,6 +222,7 @@
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
+            "time": "1347883749",
             "bin": [
                 "bin/doctrine",
                 "bin/doctrine.php"
@@ -265,8 +266,7 @@
             "keywords": [
                 "database",
                 "orm"
-            ],
-            "time": "1347883749"
+            ]
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -357,7 +357,7 @@
                 "symfony/framework-bundle": "2.*",
                 "jms/cg": "1.0.0"
             },
-            "time": "2012-01-02 17:50:26",
+            "time": "2012-01-02 19:50:26",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -399,7 +399,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-02 17:40:52",
+            "time": "2012-01-02 19:40:52",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -458,6 +458,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/orm": "*"
             },
+            "time": "1347872946",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -481,8 +482,7 @@
             "keywords": [
                 "dependency injection",
                 "annotations"
-            ],
-            "time": "1347872946"
+            ]
         },
         {
             "name": "jms/metadata",
@@ -501,7 +501,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-02 18:32:49",
+            "time": "2012-01-02 20:32:49",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -564,6 +564,7 @@
                 "symfony/form": "*",
                 "symfony/validator": "*"
             },
+            "time": "1346947943",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -578,7 +579,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -590,8 +591,7 @@
                 "security",
                 "secure",
                 "expression"
-            ],
-            "time": "1346947943"
+            ]
         },
         {
             "name": "knplabs/knp-menu",
@@ -676,7 +676,7 @@
                 "knplabs/knp-menu": "1.1.*",
                 "symfony/framework-bundle": ">=2.0,<2.2-dev"
             },
-            "time": "2012-05-17 11:56:49",
+            "time": "2012-05-17 09:56:49",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -738,6 +738,7 @@
                 "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
                 "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin"
             },
+            "time": "1347622188",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -769,8 +770,7 @@
                 "assets",
                 "compression",
                 "minification"
-            ],
-            "time": "1347622188"
+            ]
         },
         {
             "name": "monolog/monolog",
@@ -846,6 +846,7 @@
             "require": {
                 "symfony/framework-bundle": "2.1.*"
             },
+            "time": "1347340208",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -871,8 +872,7 @@
             "keywords": [
                 "distribution",
                 "configuration"
-            ],
-            "time": "1347340208"
+            ]
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1189,6 +1189,58 @@
             ]
         },
         {
+            "name": "sonata-project/doctrine-orm-admin-bundle",
+            "version": "dev-master",
+            "target-dir": "Sonata/DoctrineORMAdminBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
+                "reference": "fb32475840404f5436a965779208d982b084d85e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/zipball/fb32475840404f5436a965779208d982b084d85e",
+                "reference": "fb32475840404f5436a965779208d982b084d85e",
+                "shasum": ""
+            },
+            "require": {
+                "sonata-project/admin-bundle": "dev-master",
+                "doctrine/orm": ">=2.2,<2.4-dev",
+                "symfony/symfony": "2.1.*"
+            },
+            "time": "1347921212",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\DoctrineORMAdminBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/contributors"
+                }
+            ],
+            "description": "Symfony Sonata / Integrate Doctrine ORM into the SonataAdminBundle",
+            "homepage": "http://sonata-project.org/bundles/admin",
+            "keywords": [
+                "admin",
+                "generator",
+                "Admin Generator",
+                "sonata",
+                "bootstrap"
+            ]
+        },
+        {
             "name": "sonata-project/easy-extends-bundle",
             "version": "dev-master",
             "target-dir": "Sonata/EasyExtendsBundle",
@@ -1470,6 +1522,7 @@
             "suggest": {
                 "symfony/twig-bundle": "2.1.*"
             },
+            "time": "1347626244",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1498,8 +1551,7 @@
                 "assets",
                 "compression",
                 "minification"
-            ],
-            "time": "1347626244"
+            ]
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1582,6 +1634,7 @@
                 "symfony/config": "2.1.*",
                 "symfony/yaml": "2.1.*"
             },
+            "time": "1346243146",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1608,8 +1661,7 @@
                 }
             ],
             "description": "Symfony SwiftmailerBundle",
-            "homepage": "http://symfony.com",
-            "time": "1346243146"
+            "homepage": "http://symfony.com"
         },
         {
             "name": "symfony/symfony",
@@ -1769,6 +1821,7 @@
             "require": {
                 "twig/twig": "1.*"
             },
+            "time": "1346770278",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1796,8 +1849,7 @@
                 "debug",
                 "i18n",
                 "text"
-            ],
-            "time": "1346770278"
+            ]
         },
         {
             "name": "twig/twig",
@@ -1816,6 +1868,7 @@
             "require": {
                 "php": ">=5.2.4"
             },
+            "time": "1347961095",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1845,8 +1898,7 @@
             "homepage": "http://twig.sensiolabs.org",
             "keywords": [
                 "templating"
-            ],
-            "time": "1347961095"
+            ]
         }
     ],
     "packages-dev": null,
@@ -1856,6 +1908,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "toa/twitter-bootstrap-bundle": 20,
-        "sonata-project/user-bundle": 20
+        "sonata-project/user-bundle": 20,
+        "sonata-project/admin-bundle": 20,
+        "sonata-project/doctrine-orm-admin-bundle": 20
     }
 }
