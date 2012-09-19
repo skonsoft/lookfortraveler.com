@@ -11,14 +11,12 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="{{ path("cv_profile") }}">Cv Editor</a>
+                    <a class="brand" href="{{ path("skonsoft_look_for_traveler_homepage") }}">Home</a>
                     <div class="nav-collapse collapse">
                       <ul class="nav">
-                        <li class="active"><a href="{{ path("cv_profile") }}">{{ "navbar.home" | trans }}</a></li>
-                        <li><a href="{{ path("cv_upload_new") }}">{{ "navbar.addCv" | trans }}</a></li>
+                        <li class="active"><a href="#">{{ "navbar.home" | trans }}</a></li>
+                        <li><a href="#">{{ "navbar.addCv" | trans }}</a></li>
                         <li><a href="#contact">{{ "navbar.contact" | trans }}</a></li>
-
-
                       </ul>
                     </div><!--/.nav-collapse -->
                     <div class="pull-right">
@@ -28,6 +26,7 @@
                               {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                           </a>
                       {% else %}
+                          <a href="{{ path('fos_user_security_login') }}" class="">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
                           <a href="{{ path('fos_user_security_login') }}" class="btn">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
                       {% endif %}
                     </div>

@@ -1,15 +1,14 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     localhost
-    database_port:     ~
-    database_name:     travel_with_me
-    database_user:     root
-    database_password: 123456
-
-    mailer_transport:  smtp
-    mailer_host:       localhost
-    mailer_user:       ~
-    mailer_password:   ~
-
-    locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: ~
+    database_name: look_for_traveler
+    database_user: root
+    database_password: '123456'
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: ~
+    mailer_password: ~
+    locale: fr
+    secret: dbb33849fd8aac98a949e1a8e246ec9bc6c1a12e
+    database_path: ~

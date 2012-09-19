@@ -1,6 +1,6 @@
 <?php
 
-namespace Skonsoft\Bundle\TravelWithMeBundle\Tests\Controller;
+namespace Skonsoft\Bundle\LookForTravelerBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

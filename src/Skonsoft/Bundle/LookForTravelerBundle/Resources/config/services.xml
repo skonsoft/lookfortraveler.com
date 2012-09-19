@@ -6,11 +6,11 @@
 
     <!--
     <parameters>
-        <parameter key="skonsoft_travel_with_me.example.class">Skonsoft\Bundle\TravelWithMeBundle\Example</parameter>
+        <parameter key="skonsoft_look_for_traveler.example.class">Skonsoft\Bundle\LookForTravelerBundle\Example</parameter>
     </parameters>
 
     <services>
-        <service id="skonsoft_travel_with_me.example" class="%skonsoft_travel_with_me.example.class%">
+        <service id="skonsoft_look_for_traveler.example" class="%skonsoft_look_for_traveler.example.class%">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>
