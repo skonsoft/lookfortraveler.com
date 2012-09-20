@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    <div class="span5 well">
+        {% block fos_user_content %}
+            {% include "ApplicationSonataUserBundle:Registration:registerForm.html.twig" with {'form': form} %}
+        {% endblock fos_user_content %}
+    </div>
+{% endblock content%}
