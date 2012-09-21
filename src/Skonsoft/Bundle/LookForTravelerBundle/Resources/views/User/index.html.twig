@@ -1,0 +1,139 @@
+{% extends 'SkonsoftLookForTravelerBundle::layout.html.twig' %}
+{% block content %}
+
+<h1 class="page-header">{{ 'User'|trans }} {{ 'list'|trans }}</h1>
+
+<table class="records_list table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>{{ 'Username'|trans }}</th>
+            <th>{{ 'Usernamecanonical'|trans }}</th>
+            <th>{{ 'Email'|trans }}</th>
+            <th>{{ 'Emailcanonical'|trans }}</th>
+            <th>{{ 'Enabled'|trans }}</th>
+            <th>{{ 'Salt'|trans }}</th>
+            <th>{{ 'Password'|trans }}</th>
+            <th>{{ 'Lastlogin'|trans }}</th>
+            <th>{{ 'Locked'|trans }}</th>
+            <th>{{ 'Expired'|trans }}</th>
+            <th>{{ 'Expiresat'|trans }}</th>
+            <th>{{ 'Confirmationtoken'|trans }}</th>
+            <th>{{ 'Passwordrequestedat'|trans }}</th>
+            <th>{{ 'Roles'|trans }}</th>
+            <th>{{ 'Credentialsexpired'|trans }}</th>
+            <th>{{ 'Credentialsexpireat'|trans }}</th>
+            <th>{{ 'Createdat'|trans }}</th>
+            <th>{{ 'Updatedat'|trans }}</th>
+            <th>{{ 'Dateofbirth'|trans }}</th>
+            <th>{{ 'Firstname'|trans }}</th>
+            <th>{{ 'Lastname'|trans }}</th>
+            <th>{{ 'Website'|trans }}</th>
+            <th>{{ 'Biography'|trans }}</th>
+            <th>{{ 'Gender'|trans }}</th>
+            <th>{{ 'Locale'|trans }}</th>
+            <th>{{ 'Timezone'|trans }}</th>
+            <th>{{ 'Phone'|trans }}</th>
+            <th>{{ 'Facebookuid'|trans }}</th>
+            <th>{{ 'Facebookname'|trans }}</th>
+            <th>{{ 'Facebookdata'|trans }}</th>
+            <th>{{ 'Twitteruid'|trans }}</th>
+            <th>{{ 'Twittername'|trans }}</th>
+            <th>{{ 'Twitterdata'|trans }}</th>
+            <th>{{ 'Gplusuid'|trans }}</th>
+            <th>{{ 'Gplusname'|trans }}</th>
+            <th>{{ 'Gplusdata'|trans }}</th>
+            <th>{{ 'Token'|trans }}</th>
+            <th>{{ 'Twostepverificationcode'|trans }}</th>
+            <th>{{ 'Maritalstatus'|trans }}</th>
+            <th>{{ 'Kidsnumber'|trans }}</th>
+            <th>{{ 'Nationality'|trans }}</th>
+            <th>{{ 'Taille'|trans }}</th>
+            <th>{{ 'Silouhette'|trans }}</th>
+            <th>{{ 'Hairclor'|trans }}</th>
+            <th>{{ 'Eyecolor'|trans }}</th>
+            <th>{{ 'Residencecountry'|trans }}</th>
+            <th>{{ 'Residencetown'|trans }}</th>
+            <th>{{ 'Studylevel'|trans }}</th>
+            <th>{{ 'Activitysector'|trans }}</th>
+            <th>{{ 'Profession'|trans }}</th>
+            <th>{{ 'Careerdescription'|trans }}</th>
+            <th>{{ 'Id'|trans }}</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('user_show', { 'id': entity.id }) }}">{{ entity.username }}</a></td>
+            <td>{{ entity.usernameCanonical }}</td>
+            <td>{{ entity.email }}</td>
+            <td>{{ entity.emailCanonical }}</td>
+            <td><i class="{{ entity.enabled ? 'icon-check' : '' }}"></i></td>
+            <td>{{ entity.salt }}</td>
+            <td>{{ entity.password }}</td>
+            <td>{% if entity.lastLogin %}{{ entity.lastLogin|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td><i class="{{ entity.locked ? 'icon-check' : '' }}"></i></td>
+            <td><i class="{{ entity.expired ? 'icon-check' : '' }}"></i></td>
+            <td>{% if entity.expiresAt %}{{ entity.expiresAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.confirmationToken }}</td>
+            <td>{% if entity.passwordRequestedAt %}{{ entity.passwordRequestedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.roles }}</td>
+            <td><i class="{{ entity.credentialsExpired ? 'icon-check' : '' }}"></i></td>
+            <td>{% if entity.credentialsExpireAt %}{{ entity.credentialsExpireAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.createdAt %}{{ entity.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.updatedAt %}{{ entity.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.dateOfBirth %}{{ entity.dateOfBirth|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.firstname }}</td>
+            <td>{{ entity.lastname }}</td>
+            <td>{{ entity.website }}</td>
+            <td>{{ entity.biography }}</td>
+            <td>{{ entity.gender }}</td>
+            <td>{{ entity.locale }}</td>
+            <td>{{ entity.timezone }}</td>
+            <td>{{ entity.phone }}</td>
+            <td>{{ entity.facebookUid }}</td>
+            <td>{{ entity.facebookName }}</td>
+            <td>{{ entity.facebookData }}</td>
+            <td>{{ entity.twitterUid }}</td>
+            <td>{{ entity.twitterName }}</td>
+            <td>{{ entity.twitterData }}</td>
+            <td>{{ entity.gplusUid }}</td>
+            <td>{{ entity.gplusName }}</td>
+            <td>{{ entity.gplusData }}</td>
+            <td>{{ entity.token }}</td>
+            <td>{{ entity.twoStepVerificationCode }}</td>
+            <td><i class="{{ entity.maritalStatus ? 'icon-check' : '' }}"></i></td>
+            <td><i class="{{ entity.kidsNumber ? 'icon-check' : '' }}"></i></td>
+            <td>{{ entity.nationality }}</td>
+            <td>{{ entity.taille }}</td>
+            <td><i class="{{ entity.silouhette ? 'icon-check' : '' }}"></i></td>
+            <td><i class="{{ entity.hairClor ? 'icon-check' : '' }}"></i></td>
+            <td><i class="{{ entity.eyeColor ? 'icon-check' : '' }}"></i></td>
+            <td>{{ entity.residenceCountry }}</td>
+            <td>{{ entity.residenceTown }}</td>
+            <td><i class="{{ entity.studyLevel ? 'icon-check' : '' }}"></i></td>
+            <td><i class="{{ entity.activitySector ? 'icon-check' : '' }}"></i></td>
+            <td><i class="{{ entity.profession ? 'icon-check' : '' }}"></i></td>
+            <td>{{ entity.careerDescription }}</td>
+            <td>{{ entity.id }}</td>
+            <td>
+                <a class="btn btn-mini" href="{{ path('user_show', { 'id': entity.id }) }}">
+                    <i class="icon-eye-open"></i>
+                    {{ 'show'|trans }}
+                </a>
+                <a class="btn btn-mini" href="{{ path('user_edit', { 'id': entity.id }) }}">
+                    <i class="icon-pencil"></i>
+                    {{ 'edit'|trans }}
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn" href="{{ path('user_new') }}">
+    <i class="icon-plus"></i>
+    {{ 'create a new entry'|trans }}
+</a>
+
+{% endblock %}

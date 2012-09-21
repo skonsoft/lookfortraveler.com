@@ -1,0 +1,31 @@
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                  
+    <ul class="nav pull-right">
+      <li class="divider-vertical"></li>
+      <li class="dropdown">
+          <a class="dropdown-toggle btn-large" href="#" data-toggle="dropdown" >{{ app.user.username }}<strong class="caret"></strong></a>
+                <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
+                    <li>{{ app.user.email }}</li>
+                    <li><a href="{{path('sonata_user_profile_edit_authentication')}}">Paramètres du compte</a></li>
+                    <li><a href="{{path('user_edit', {'id':1} )}}">Editer mon profil</a></li>
+                    <li>
+                        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-danger">
+                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    </li>
+                </ul>
+                    
+      </li>
+    </ul>
+{% else %}
+    <ul class="nav pull-right">
+      <li><a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a></li>
+      <li class="divider-vertical"></li>
+      <li class="dropdown">
+          <a class="dropdown-toggle btn-large" href="#" data-toggle="dropdown" >{{ 'layout.login'|trans({}, 'FOSUserBundle') }}<strong class="caret"></strong></a>
+        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+          {% render "ApplicationSonataUserBundle:Security:loginForm"%}
+        </div>
+      </li>
+    </ul>
+{% endif %}

@@ -21,5 +21,11 @@ class SecurityController extends BaseController
 
         return $this->container->get('templating')->renderResponse("ApplicationSonataUserBundle:Security:loginForm.html.twig", array('csrf_token' => $csrfToken));
     }
+    
+    public function userNavbarAction()
+    {
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        return $this->container->get('templating')->renderResponse("ApplicationSonataUserBundle:Security:userNavbar.html.twig", array('user'=>$user) );
+    }
 
 }

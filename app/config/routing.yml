@@ -1,7 +1,12 @@
+skonsoft_look_for_traveler_user:
+    resource: "@SkonsoftLookForTravelerBundle/Controller/UserController.php"
+    prefix:   /
+    type: annotation
+    
 skonsoft_look_for_traveler:
     resource: "@SkonsoftLookForTravelerBundle/Resources/config/routing.xml"
     prefix:   /
-
+    
 sonata_user:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
     prefix: /admin
