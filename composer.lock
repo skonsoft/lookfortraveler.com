@@ -1,5 +1,5 @@
 {
-    "hash": "394c422ba4ec920367cba0768111daff",
+    "hash": "ab31ae9de41e1c522d4f957267d9da73",
     "packages": [
         {
             "name": "doctrine/common",
@@ -1339,6 +1339,61 @@
             ]
         },
         {
+            "name": "sonata-project/intl-bundle",
+            "version": "dev-master",
+            "target-dir": "Sonata/IntlBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataIntlBundle",
+                "reference": "92593254c51e450a170c4f29d3bcd7f55d248825"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/sonata-project/SonataIntlBundle/zipball/92593254c51e450a170c4f29d3bcd7f55d248825",
+                "reference": "92593254c51e450a170c4f29d3bcd7f55d248825",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/http-kernel": "2.*",
+                "symfony/dependency-injection": "2.*",
+                "symfony/templating": "2.*",
+                "symfony/locale": "2.*",
+                "twig/twig": "*",
+                "ext-intl": "*"
+            },
+            "time": "1346369098",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\IntlBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataIntlBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataIntlBundle",
+            "homepage": "http://sonata-project.org/bundles/intl",
+            "keywords": [
+                "sonata",
+                "time",
+                "date",
+                "intl",
+                "number"
+            ]
+        },
+        {
             "name": "sonata-project/jquery-bundle",
             "version": "dev-master",
             "target-dir": "Sonata/jQueryBundle",
@@ -1857,18 +1912,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "b4d1d62b82e83c6fd3d5a6cd46a186de64275bb4"
+                "reference": "b8c917972f74da88f0e930ea32a90566739d87ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/zipball/b4d1d62b82e83c6fd3d5a6cd46a186de64275bb4",
-                "reference": "b4d1d62b82e83c6fd3d5a6cd46a186de64275bb4",
+                "url": "https://github.com/fabpot/Twig/zipball/b8c917972f74da88f0e930ea32a90566739d87ac",
+                "reference": "b8c917972f74da88f0e930ea32a90566739d87ac",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1347961095",
+            "time": "1348667791",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1910,6 +1965,9 @@
         "toa/twitter-bootstrap-bundle": 20,
         "sonata-project/user-bundle": 20,
         "sonata-project/admin-bundle": 20,
-        "sonata-project/doctrine-orm-admin-bundle": 20
+        "sonata-project/doctrine-orm-admin-bundle": 20,
+        "sonata-project/cache-bundle": 20,
+        "sonata-project/exporter": 20,
+        "sonata-project/intl-bundle": 20
     }
 }

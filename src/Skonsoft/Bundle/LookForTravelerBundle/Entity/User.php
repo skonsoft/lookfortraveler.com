@@ -15,6 +15,12 @@ class User extends BaseUser
 {
 
     /**
+     * @ORM\ManyToMany(targetEntity="\Application\Sonata\UserBundle\Entity\Group", inversedBy="users")
+     * @ORM\JoinTable(name="fos_user_user_group")
+     */
+    protected $groups;
+    
+    /**
      * @var boolean $maritalStatus
      *
      * @ORM\Column(name="marital_status", type="smallint", nullable=true)
