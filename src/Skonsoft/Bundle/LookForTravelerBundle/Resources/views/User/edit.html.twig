@@ -4,7 +4,19 @@
 
 {% block mainContent %}
 
-<h1 class="page-header">{{ 'User'|trans }} {{ 'edit'|trans }}</h1>
+<h1 class="page-header">{{ 'Profile'|trans }} {{ 'edit'|trans }}</h1>
+
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="alert alert-success">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
+{% for flashMessage in app.session.flashbag.get('error') %}
+    <div class="alert alert-error">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
 
 <form class="form-horizontal" action="{{ path('user_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
     {{ form_widget(edit_form) }}
@@ -13,21 +25,11 @@
             <i class="icon-pencil"></i>
             {{ 'edit'|trans }}
         </button>
+        <a class="btn" href="{{ path('skonsoft_look_for_traveler_homepage') }}">
+            <i class="icon-home"></i>
+            {{ 'cancel'|trans }}
+        </a>
     </p>
 </form>
-
-
-    <form action="{{ path('user_delete', { 'id': entity.id }) }}" method="post">
-        {{ form_widget(delete_form) }}
-        <button class="btn btn-danger" type="submit">
-            <i class="icon-trash"></i>
-            {{ 'delete'|trans }}
-        </button>
-    </form>
-
-    <a class="btn" href="{{ path('user') }}">
-        <i class="icon-th-list"></i>
-        {{ 'back to the list'|trans }}
-    </a>
 
 {% endblock %}

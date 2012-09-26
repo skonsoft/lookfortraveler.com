@@ -155,10 +155,12 @@ class UserController extends Controller
         if ($editForm->isValid()) {
             $em->persist($entity);
             $em->flush();
-
+            
+            $this->get('session')->getFlashBag()->add('notice', 'Your changes were saved!');
             return $this->redirect($this->generateUrl('user_edit', array('id' => $id)));
         }
-
+        
+        $this->get('session')->getFlashBag()->add('error', 'oups ! an error was occured');
         return array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),

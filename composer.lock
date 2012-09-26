@@ -138,12 +138,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/DoctrineBundle.git",
-                "reference": "d3c930599723c8343472a5791b0f5909a4111a73"
+                "reference": "065947875fd66b3f89ed01f94859e8600491ada5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineBundle/zipball/d3c930599723c8343472a5791b0f5909a4111a73",
-                "reference": "d3c930599723c8343472a5791b0f5909a4111a73",
+                "url": "https://github.com/doctrine/DoctrineBundle/zipball/065947875fd66b3f89ed01f94859e8600491ada5",
+                "reference": "065947875fd66b3f89ed01f94859e8600491ada5",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
-            "time": "1347289964",
+            "time": "1348519642",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -275,12 +275,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "34f1919ceab96339a8dc6ad7c2b00274a6f499f1"
+                "reference": "1b2d06b0f9a7ef5dbd94433ad15c3ab7cc3eb492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/34f1919ceab96339a8dc6ad7c2b00274a6f499f1",
-                "reference": "34f1919ceab96339a8dc6ad7c2b00274a6f499f1",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/1b2d06b0f9a7ef5dbd94433ad15c3ab7cc3eb492",
+                "reference": "1b2d06b0f9a7ef5dbd94433ad15c3ab7cc3eb492",
                 "shasum": ""
             },
             "require": {
@@ -301,7 +301,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "1347897534",
+            "time": "1348265094",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -976,12 +976,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "26b304d92d5efebcbd0bda619a6e77d5ddd53640"
+                "reference": "7d7aee76c6c141cc356492f79b4ab78a7269c335"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataAdminBundle/zipball/26b304d92d5efebcbd0bda619a6e77d5ddd53640",
-                "reference": "26b304d92d5efebcbd0bda619a6e77d5ddd53640",
+                "url": "https://github.com/sonata-project/SonataAdminBundle/zipball/7d7aee76c6c141cc356492f79b4ab78a7269c335",
+                "reference": "7d7aee76c6c141cc356492f79b4ab78a7269c335",
                 "shasum": ""
             },
             "require": {
@@ -997,7 +997,7 @@
                 "sonata-project/doctrine-orm-admin-bundle": "dev-master",
                 "sonata-project/intl-bundle": "dev-master"
             },
-            "time": "1348174970",
+            "time": "1348410160",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1195,12 +1195,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "fb32475840404f5436a965779208d982b084d85e"
+                "reference": "072d292b9a759cf7dd562a9bb9eba2f48c92d8c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/zipball/fb32475840404f5436a965779208d982b084d85e",
-                "reference": "fb32475840404f5436a965779208d982b084d85e",
+                "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/zipball/072d292b9a759cf7dd562a9bb9eba2f48c92d8c2",
+                "reference": "072d292b9a759cf7dd562a9bb9eba2f48c92d8c2",
                 "shasum": ""
             },
             "require": {
@@ -1208,7 +1208,7 @@
                 "doctrine/orm": ">=2.2,<2.4-dev",
                 "symfony/symfony": "2.1.*"
             },
-            "time": "1347921212",
+            "time": "1348476029",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -1393,12 +1393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle",
-                "reference": "6c4d1857a5c041f4e6656c8b238f16e3ea0a423c"
+                "reference": "20d18cea2bbbc709c6ea8da4228312b638fd85cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataUserBundle/zipball/6c4d1857a5c041f4e6656c8b238f16e3ea0a423c",
-                "reference": "6c4d1857a5c041f4e6656c8b238f16e3ea0a423c",
+                "url": "https://github.com/sonata-project/SonataUserBundle/zipball/20d18cea2bbbc709c6ea8da4228312b638fd85cf",
+                "reference": "20d18cea2bbbc709c6ea8da4228312b638fd85cf",
                 "shasum": ""
             },
             "require": {
@@ -1411,7 +1411,7 @@
             "suggest": {
                 "sonata-project/doctrine-orm-admin-bundle": "dev-master"
             },
-            "time": "1347999488",
+            "time": "1348577249",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -1669,12 +1669,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "237629ad64b4b6ce2d2c6ad15a2085f128d6f11e"
+                "reference": "21d16e60fa2d4dc12a489817070896daf806b55d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/237629ad64b4b6ce2d2c6ad15a2085f128d6f11e",
-                "reference": "237629ad64b4b6ce2d2c6ad15a2085f128d6f11e",
+                "url": "https://github.com/symfony/symfony/zipball/21d16e60fa2d4dc12a489817070896daf806b55d",
+                "reference": "21d16e60fa2d4dc12a489817070896daf806b55d",
                 "shasum": ""
             },
             "require": {
@@ -1723,7 +1723,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "dev-master"
             },
-            "time": "1348209286",
+            "time": "1348488710",
             "type": "library",
             "extra": {
                 "branch-alias": {
