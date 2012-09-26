@@ -29,11 +29,13 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
             
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Skonsoft\Bundle\LookForTravelerBundle\SkonsoftLookForTravelerBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             
         );
 
