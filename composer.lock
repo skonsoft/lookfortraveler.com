@@ -1,5 +1,5 @@
 {
-    "hash": "ab31ae9de41e1c522d4f957267d9da73",
+    "hash": "8cb3ce5557bc58fefecf9a09ed44e0cf",
     "packages": [
         {
             "name": "doctrine/common",
@@ -968,6 +968,41 @@
                 }
             ],
             "description": "This bundle generates code for you"
+        },
+        {
+            "name": "simplethings/entity-audit-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplethings/EntityAudit.git",
+                "reference": "60a5bcb61a43fc4360ff5190cb4b5e63864fc3b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/simplethings/EntityAudit/zipball/60a5bcb61a43fc4360ff5190cb4b5e63864fc3b7",
+                "reference": "60a5bcb61a43fc4360ff5190cb4b5e63864fc3b7",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": ">=2.1.0,<2.4"
+            },
+            "time": "1343892178",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "SimpleThings\\EntityAudit": "src/"
+                }
+            },
+            "license": [
+                "New BSD"
+            ],
+            "description": "Audit for Doctrine Entities",
+            "keywords": [
+                "database",
+                "persistence",
+                "Audit"
+            ]
         },
         {
             "name": "sonata-project/admin-bundle",
@@ -1968,6 +2003,7 @@
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/cache-bundle": 20,
         "sonata-project/exporter": 20,
-        "sonata-project/intl-bundle": 20
+        "sonata-project/intl-bundle": 20,
+        "simplethings/entity-audit-bundle": 20
     }
 }

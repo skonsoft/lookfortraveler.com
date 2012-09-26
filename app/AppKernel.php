@@ -28,10 +28,13 @@ class AppKernel extends Kernel
             new Sonata\CacheBundle\SonataCacheBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+            
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Skonsoft\Bundle\LookForTravelerBundle\SkonsoftLookForTravelerBundle(),
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
