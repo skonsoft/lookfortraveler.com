@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('SkonsoftLookForTravelerBundle:Default:index.html.twig');
     }
+    
+    public function searchFormAction(){
+        return $this->render('SkonsoftLookForTravelerBundle:Default:searchForm.html.twig');
+    }
 }
