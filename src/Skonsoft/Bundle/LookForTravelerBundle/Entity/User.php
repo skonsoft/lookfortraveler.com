@@ -3,6 +3,7 @@
 namespace Skonsoft\Bundle\LookForTravelerBundle\Entity;
 
 use Application\Sonata\UserBundle\Entity\User as BaseUser;
+use \Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -19,7 +20,7 @@ class User extends BaseUser
      * @ORM\JoinTable(name="fos_user_user_group")
      */
     protected $groups;
-    
+
     /**
      * @var boolean $maritalStatus
      *
@@ -121,6 +122,21 @@ class User extends BaseUser
      */
     private $aboutMe;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Trip")
+     * @ORM\JoinTable(name="user_trip",
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="trip_id", referencedColumnName="id")}
+     *      )
+     */
+    private $trips;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->trips = new ArrayCollection();
+    }
 
     /**
      * Set maritalStatus
@@ -131,7 +147,7 @@ class User extends BaseUser
     public function setMaritalStatus($maritalStatus)
     {
         $this->maritalStatus = $maritalStatus;
-    
+
         return $this;
     }
 
@@ -154,7 +170,7 @@ class User extends BaseUser
     public function setKidsNumber($kidsNumber)
     {
         $this->kidsNumber = $kidsNumber;
-    
+
         return $this;
     }
 
@@ -177,7 +193,7 @@ class User extends BaseUser
     public function setNationality($nationality)
     {
         $this->nationality = $nationality;
-    
+
         return $this;
     }
 
@@ -200,7 +216,7 @@ class User extends BaseUser
     public function setTaille($taille)
     {
         $this->taille = $taille;
-    
+
         return $this;
     }
 
@@ -223,7 +239,7 @@ class User extends BaseUser
     public function setSilouhette($silouhette)
     {
         $this->silouhette = $silouhette;
-    
+
         return $this;
     }
 
@@ -246,7 +262,7 @@ class User extends BaseUser
     public function setHairClor($hairClor)
     {
         $this->hairClor = $hairClor;
-    
+
         return $this;
     }
 
@@ -269,7 +285,7 @@ class User extends BaseUser
     public function setEyeColor($eyeColor)
     {
         $this->eyeColor = $eyeColor;
-    
+
         return $this;
     }
 
@@ -292,7 +308,7 @@ class User extends BaseUser
     public function setResidenceCountry($residenceCountry)
     {
         $this->residenceCountry = $residenceCountry;
-    
+
         return $this;
     }
 
@@ -315,7 +331,7 @@ class User extends BaseUser
     public function setResidenceTown($residenceTown)
     {
         $this->residenceTown = $residenceTown;
-    
+
         return $this;
     }
 
@@ -338,7 +354,7 @@ class User extends BaseUser
     public function setStudyLevel($studyLevel)
     {
         $this->studyLevel = $studyLevel;
-    
+
         return $this;
     }
 
@@ -361,7 +377,7 @@ class User extends BaseUser
     public function setActivitySector($activitySector)
     {
         $this->activitySector = $activitySector;
-    
+
         return $this;
     }
 
@@ -384,7 +400,7 @@ class User extends BaseUser
     public function setProfession($profession)
     {
         $this->profession = $profession;
-    
+
         return $this;
     }
 
@@ -407,7 +423,7 @@ class User extends BaseUser
     public function setCareerDescription($careerDescription)
     {
         $this->careerDescription = $careerDescription;
-    
+
         return $this;
     }
 
@@ -440,7 +456,7 @@ class User extends BaseUser
     public function setAboutMe(\Skonsoft\Bundle\LookForTravelerBundle\Entity\AboutMe $aboutMe = null)
     {
         $this->aboutMe = $aboutMe;
-    
+
         return $this;
     }
 
@@ -453,7 +469,5 @@ class User extends BaseUser
     {
         return $this->aboutMe;
     }
-
-
 
 }
