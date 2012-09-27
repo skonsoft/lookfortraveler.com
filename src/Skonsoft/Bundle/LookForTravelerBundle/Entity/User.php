@@ -470,4 +470,75 @@ class User extends BaseUser
         return $this->aboutMe;
     }
 
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+
+    /**
+     * Add groups
+     *
+     * @param Application\Sonata\UserBundle\Entity\Group $groups
+     * @return User
+     */
+    public function addGroup(\Application\Sonata\UserBundle\Entity\Group $groups)
+    {
+        $this->groups[] = $groups;
+    
+        return $this;
+    }
+
+    /**
+     * Remove groups
+     *
+     * @param Application\Sonata\UserBundle\Entity\Group $groups
+     */
+    public function removeGroup(\Application\Sonata\UserBundle\Entity\Group $groups)
+    {
+        $this->groups->removeElement($groups);
+    }
+
+    /**
+     * Get groups
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * Add trips
+     *
+     * @param Skonsoft\Bundle\LookForTravelerBundle\Entity\Trip $trips
+     * @return User
+     */
+    public function addTrip(\Skonsoft\Bundle\LookForTravelerBundle\Entity\Trip $trips)
+    {
+        $this->trips[] = $trips;
+    
+        return $this;
+    }
+
+    /**
+     * Remove trips
+     *
+     * @param Skonsoft\Bundle\LookForTravelerBundle\Entity\Trip $trips
+     */
+    public function removeTrip(\Skonsoft\Bundle\LookForTravelerBundle\Entity\Trip $trips)
+    {
+        $this->trips->removeElement($trips);
+    }
+
+    /**
+     * Get trips
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getTrips()
+    {
+        return $this->trips;
+    }
 }
