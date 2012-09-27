@@ -32,10 +32,16 @@
                             <div class="nav-collapse collapse">
                               <ul class="nav">
                                 <li class="active"><a href="#">{{ "navbar.home" | trans }}</a></li>
-                                <li><a href="#">{{ "navbar.addCv" | trans }}</a></li>
+                                <li><a href="#">{{ "navbar.list" | trans }}</a></li>
+                                <li><a href="#">{{ "navbar.howto" | trans }}</a></li>
                                 <li><a href="#contact">{{ "navbar.contact" | trans }}</a></li>
                               </ul>
                             </div><!--/.nav-collapse -->
+                           
+                            <form class="navbar-form pull-left">
+                                <input type="text" class="search-query" placeholder="Search">
+                            </form>
+                            
                             <div class="pull-right">
                               {% render "ApplicationSonataUserBundle:Security:userNavbar"%}
                             </div>

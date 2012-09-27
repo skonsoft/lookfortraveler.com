@@ -470,44 +470,6 @@ class User extends BaseUser
         return $this->aboutMe;
     }
 
-    /**
-     * @var integer $id
-     */
-    private $id;
-
-
-    /**
-     * Add groups
-     *
-     * @param Application\Sonata\UserBundle\Entity\Group $groups
-     * @return User
-     */
-    public function addGroup(\Application\Sonata\UserBundle\Entity\Group $groups)
-    {
-        $this->groups[] = $groups;
-    
-        return $this;
-    }
-
-    /**
-     * Remove groups
-     *
-     * @param Application\Sonata\UserBundle\Entity\Group $groups
-     */
-    public function removeGroup(\Application\Sonata\UserBundle\Entity\Group $groups)
-    {
-        $this->groups->removeElement($groups);
-    }
-
-    /**
-     * Get groups
-     *
-     * @return Doctrine\Common\Collections\Collection 
-     */
-    public function getGroups()
-    {
-        return $this->groups;
-    }
 
     /**
      * Add trips
