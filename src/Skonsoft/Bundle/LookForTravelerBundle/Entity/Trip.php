@@ -77,6 +77,20 @@ class Trip
      * @ORM\Column(name="status", type="boolean", nullable=false)
      */
     private $status;
+    
+    /**
+     * the authorized travelers that can participate on this trip.
+     * 
+     *  1: all
+     *  2: group
+     *  3: only girls
+     *  4: only boys
+     * 
+     * @var integer
+     * 
+     * @ORM\Column(name="authorized_category_traveler", type="integer", nullable=false)
+     */
+    private $authorizedCategoryTraveler = 1;
 
     /**
      * Constructor
