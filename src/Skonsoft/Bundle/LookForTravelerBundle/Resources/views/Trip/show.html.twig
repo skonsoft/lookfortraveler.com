@@ -1,0 +1,71 @@
+{% extends 'SkonsoftTravelWithMeBundle::layout.html.twig' %}
+{% block content %}
+
+<h1 class="page-header">{{ 'Trip'|trans }}</h1>
+
+<table class="record_properties table table-bordered table-condensed table-striped">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+            <th>Startdate</th>
+            <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Returndate</th>
+            <td>{% if entity.returnDate %}{{ entity.returnDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{ entity.price }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+        <tr>
+            <th>Startplace</th>
+            <td>{{ entity.startPlace }}</td>
+        </tr>
+        <tr>
+            <th>Returnplace</th>
+            <td>{{ entity.returnPlace }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td><i class="{{ entity.status ? 'icon-check' : '' }}"></i></td>
+        </tr>
+        <tr>
+            <th>Authorizedcategorytraveler</th>
+            <td>{{ entity.authorizedCategoryTraveler }}</td>
+        </tr>
+    </tbody>
+</table>
+
+    <p>
+        <a class="btn" href="{{ path('trip_edit', { 'id': entity.id }) }}">
+            <i class="icon-pencil"></i>
+            {{ 'edit'|trans }}
+        </a>
+    </p>
+
+    <form action="{{ path('trip_delete', { 'id': entity.id }) }}" method="post">
+        {{ form_widget(delete_form) }}
+        <button class="btn btn-danger" type="submit">
+            <i class="icon-trash"></i>
+            {{ 'delete'|trans }}
+        </button>
+    </form>
+
+    <a class="btn" href="{{ path('trip') }}">
+        <i class="icon-th-list"></i>
+        {{ 'back to the list'|trans }}
+    </a>
+
+{% endblock %}

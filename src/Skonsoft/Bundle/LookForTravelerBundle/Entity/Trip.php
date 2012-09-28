@@ -32,9 +32,15 @@ class Trip
     /**
      * @var \DateTime $startDate
      *
-     * @ORM\Column(name="start_date", type="datetime", nullable=false)
+     * @ORM\Column(name="start_date", type="date", nullable=false)
      */
     private $startDate;
+    /**
+     * @var \DateTime $startTime
+     *
+     * @ORM\Column(name="start_time", type="time", nullable=false)
+     */
+    private $startTime;
 
     /**
      * @var \DateTime $returnDate
@@ -42,6 +48,13 @@ class Trip
      * @ORM\Column(name="return_date", type="datetime", nullable=false)
      */
     private $returnDate;
+    
+    /**
+     * @var \DateTime $returnTime
+     *
+     * @ORM\Column(name="return_time", type="time", nullable=false)
+     */
+    private $returnTime;
 
     /**
      * @var float $price
@@ -293,5 +306,74 @@ class Trip
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set authorizedCategoryTraveler
+     *
+     * @param integer $authorizedCategoryTraveler
+     * @return Trip
+     */
+    public function setAuthorizedCategoryTraveler($authorizedCategoryTraveler)
+    {
+        $this->authorizedCategoryTraveler = $authorizedCategoryTraveler;
+    
+        return $this;
+    }
+
+    /**
+     * Get authorizedCategoryTraveler
+     *
+     * @return integer 
+     */
+    public function getAuthorizedCategoryTraveler()
+    {
+        return $this->authorizedCategoryTraveler;
+    }
+
+    /**
+     * Set startTime
+     *
+     * @param \DateTime $startTime
+     * @return Trip
+     */
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+    
+        return $this;
+    }
+
+    /**
+     * Get startTime
+     *
+     * @return \DateTime 
+     */
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
+
+    /**
+     * Set returnTime
+     *
+     * @param \DateTime $returnTime
+     * @return Trip
+     */
+    public function setReturnTime($returnTime)
+    {
+        $this->returnTime = $returnTime;
+    
+        return $this;
+    }
+
+    /**
+     * Get returnTime
+     *
+     * @return \DateTime 
+     */
+    public function getReturnTime()
+    {
+        return $this->returnTime;
     }
 }

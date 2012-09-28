@@ -1,0 +1,50 @@
+{% form_theme form 'ToaTwitterBootstrapBundle:Form:widgets.html.twig' %}
+
+{% extends 'SkonsoftLookForTravelerBundle:Trip:layout.html.twig' %}
+
+
+{% block mainContent %}
+
+<div class="row-fluid">
+    <div class="well">
+        
+        <h1 class="page-header">{{ 'New'|trans }} {{ 'trip'|trans }}</h1>
+        
+        <form class="form-horizontal" action="{{ path('trip_create') }}" method="post" {{ form_enctype(form) }}>
+            
+            {{ form_row(form.name) }}
+            
+            <div class="control-group">
+                {{ form_errors(form.startDate) }}
+                {{ form_errors(form.startTime) }}
+                <div class="input-append bootstrap-timepicker-component">
+                    
+                    {{ form_label(form.startDate ,null, { 'label_attr': {'class': 'control-label'} } ) }}
+                        
+                    {{ form_widget(form.startDate) }}
+                    <span class="add-on">@</span>
+                    {{ form_widget(form.startTime) }}
+                    <span class="add-on">
+                        <i class="icon-time"></i>
+                    </span>
+                </div>
+            </div>
+            
+            {{ form_rest(form)}}
+            <p>
+                <button class="btn" type="submit">
+                    <i class="icon-plus"></i>
+                    {{ 'create'|trans }}
+                </button>
+                    
+                <a class="btn" href="{{ path('skonsoft_look_for_traveler_homepage') }}">
+                    <i class="icon-home"></i>
+                    {{ 'Cancel'|trans }}
+                </a>
+                    
+            </p>
+        </form>
+           
+    </div>
+</div>
+{% endblock %}

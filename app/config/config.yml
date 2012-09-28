@@ -151,7 +151,7 @@ sonata_media:
 
 
 toa_twitter_bootstrap:
-    template: "SkonsoftTravelWithMeBundle::layout.html.twig"
+    template: "SkonsoftLookForTravelerBundle::layout.html.twig"
     block: "content"
     
 knp_menu:

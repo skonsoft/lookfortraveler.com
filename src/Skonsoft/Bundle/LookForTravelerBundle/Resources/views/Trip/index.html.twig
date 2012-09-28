@@ -1,0 +1,55 @@
+{% extends 'SkonsoftTravelWithMeBundle::layout.html.twig' %}
+{% block content %}
+
+<h1 class="page-header">{{ 'Trip'|trans }} {{ 'list'|trans }}</h1>
+
+<table class="records_list table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>{{ 'Id'|trans }}</th>
+            <th>{{ 'Name'|trans }}</th>
+            <th>{{ 'Startdate'|trans }}</th>
+            <th>{{ 'Returndate'|trans }}</th>
+            <th>{{ 'Price'|trans }}</th>
+            <th>{{ 'Description'|trans }}</th>
+            <th>{{ 'Startplace'|trans }}</th>
+            <th>{{ 'Returnplace'|trans }}</th>
+            <th>{{ 'Status'|trans }}</th>
+            <th>{{ 'Authorizedcategorytraveler'|trans }}</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('trip_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.name }}</td>
+            <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.returnDate %}{{ entity.returnDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.price }}</td>
+            <td>{{ entity.description }}</td>
+            <td>{{ entity.startPlace }}</td>
+            <td>{{ entity.returnPlace }}</td>
+            <td><i class="{{ entity.status ? 'icon-check' : '' }}"></i></td>
+            <td>{{ entity.authorizedCategoryTraveler }}</td>
+            <td>
+                <a class="btn btn-mini" href="{{ path('trip_show', { 'id': entity.id }) }}">
+                    <i class="icon-eye-open"></i>
+                    {{ 'show'|trans }}
+                </a>
+                <a class="btn btn-mini" href="{{ path('trip_edit', { 'id': entity.id }) }}">
+                    <i class="icon-pencil"></i>
+                    {{ 'edit'|trans }}
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn" href="{{ path('trip_new') }}">
+    <i class="icon-plus"></i>
+    {{ 'create a new entry'|trans }}
+</a>
+
+{% endblock %}
